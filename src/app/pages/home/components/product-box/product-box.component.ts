@@ -11,14 +11,7 @@ export class ProductBoxComponent implements OnInit {
   @Input() fullWidthMode = false;
   @Output() addToCard = new EventEmitter();
 
-  product: Product | undefined = {
-    id: 1,
-    title: 'Snickers',
-    price:150,
-    category: 'shoes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150'
-  };
+  @Input() product: Product | undefined;
   constructor(){}
 
   ngOnInit(): void {
